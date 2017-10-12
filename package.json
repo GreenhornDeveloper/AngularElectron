@@ -1,0 +1,79 @@
+{
+  "name": "my-new-app",
+  "productName": "my-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "tslint src"
+  },
+  "keywords": [],
+  "author": "mazhal",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn"
+      },
+      "electronWinstallerConfig": {
+        "name": "my_app"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "myapp"
+      }
+    }
+  },
+  "dependencies": {
+    "@angular/animations": "^4.4.4",
+    "@angular/cdk": "^2.0.0-beta.12",
+    "@angular/common": "^4.4.4",
+    "@angular/compiler": "^4.4.4",
+    "@angular/core": "^4.4.4",
+    "@angular/forms": "^4.4.4",
+    "@angular/http": "^4.4.4",
+    "@angular/material": "^2.0.0-beta.12",
+    "@angular/platform-browser": "^4.4.4",
+    "@angular/platform-browser-dynamic": "^4.4.4",
+    "@types/electron": "1.4.30",
+    "core-js": "^2.5.1",
+    "electron-compile": "^6.4.1",
+    "electron-devtools-installer": "^2.2.0",
+    "electron-rebuild": "^1.5.7",
+    "reflect-metadata": "^0.1.10",
+    "sqlite3": "^3.1.13",
+    "tslib": "^1.7.1",
+    "zone.js": "^0.8.16"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^4.1.2",
+    "electron-prebuilt-compile": "1.7.8",
+    "tslint": "^4.2.0",
+    "typescript": "~2.1.4"
+  }
+}
